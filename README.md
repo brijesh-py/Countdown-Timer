@@ -2,7 +2,7 @@
 
 A simple countdown timer web application that displays the remaining time in days, hours, minutes, and seconds.
 
-![Countdown Timer](screenshot.png)
+![Countdown Timer](https://github.com/brijesh-py/Countdown-Timer/assets/134686367/85c2e8ef-07ed-48bc-bb5d-d602eb104942)
 
 ## Features
 
