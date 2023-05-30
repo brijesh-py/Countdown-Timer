@@ -10,11 +10,9 @@ const timeInterval = setInterval(() =>interval(), 1000);
 const interval = () => {
   const currentTime = new Date().getTime();
   const timeRemaining = targetTime - currentTime;
-  if(timeRemaining < 0){
-    clearInterval(timeInterval);
-  }
+
   // Calculate the days, hours, minutes, and seconds
-  
+
   let days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
   let hours = Math.floor(
     (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
@@ -35,10 +33,19 @@ const interval = () => {
     seconds = "0" + seconds;
   }
 
-  dayElement.innerText = days;
-  hoursElement.innerText = hours;
-  minutesElement.innerText = minutes;
-  secondElement.innerText = seconds;
+  if(timeRemaining < 0){
+    clearInterval(timeInterval);
+    document.getElementById("timer").innerHTML = "Countdown finished!";
+    dayElement.innerText = "00";
+    hoursElement.innerText = "00";
+    minutesElement.innerText = "00";
+    secondElement.innerText = "00";
+  }else{
+    dayElement.innerText = days;
+    hoursElement.innerText = hours;
+    minutesElement.innerText = minutes;
+    secondElement.innerText = seconds;
+  }
   
 };
 interval();
