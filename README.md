@@ -21,7 +21,7 @@ A simple countdown timer web application that displays the remaining time in day
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/countdown-timer.git
+   git clone https://github.com/brijesh-py/Countdown-Timer.git
    ```
 
 2. Navigate to the project directory:
